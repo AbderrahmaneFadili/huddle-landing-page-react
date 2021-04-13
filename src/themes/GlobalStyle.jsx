@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   /* Reset Style */
@@ -19,9 +19,18 @@ const GlobalStyle = createGlobalStyle`
       font-family:var(--body-font);
   }
  
+ body{
+     font-family:inherit;
+ }
  h1,h2,h3,h4,h5,h6{
      font-family:var(--heading-font)
  }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
 `;
 
 export default GlobalStyle;

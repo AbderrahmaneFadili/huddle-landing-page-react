@@ -7,8 +7,8 @@ const theme = {
     VeryPaleBlue: "hsl(207, 100%, 98%)",
   },
   typography: {
-    headings: "'Open Sans', sans-serif;",
-    body: "'Poppins', sans-serif;",
+    body: "'Open Sans', sans-serif;",
+    headings: "'Poppins', sans-serif;",
   },
 };
 
