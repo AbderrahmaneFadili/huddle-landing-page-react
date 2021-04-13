@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CommunitiesWrapper = styled.section`
-  padding: 3rem 0;
+  padding: 3rem 0 14rem;
 `;
 
 export const CommunitiesContainer = styled.div`
