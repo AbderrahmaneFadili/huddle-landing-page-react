@@ -16,6 +16,8 @@ export const ButtonWrapper = styled.a`
       : "1px 0px 24px -12px rgba(0, 0, 0, 0.62)"};
   text-transform: capitalize;
   transition: 0.4s all ease-in;
+  text-align: center;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.7;

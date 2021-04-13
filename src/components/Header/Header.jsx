@@ -8,7 +8,7 @@ const Header = () => {
       <Container>
         <HeaderContainer>
           <Logo src={require("../../images/logo.svg").default} />
-          <Button href="#" rounded>
+          <Button href="#" outline rounded>
             Try it free
           </Button>
         </HeaderContainer>
