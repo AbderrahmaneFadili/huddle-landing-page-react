@@ -31,6 +31,10 @@ export const CommunityIcon = styled.img`
 export const CommunityCount = styled.h1`
   color: var(--very-dark-cyan);
   font-size: 6rem;
+
+  @media screen and (max-width: 300px) {
+    font-size: 4rem;
+  }
 `;
 
 export const CommunityInfo = styled.p`

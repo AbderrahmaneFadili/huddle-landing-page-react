@@ -13,4 +13,8 @@ export const HeaderContainer = styled.div`
 export const Logo = styled.img`
   width: 150px;
   height: 100%;
+
+  @media screen and (max-width: 360px) {
+    width: 100px;
+  }
 `;

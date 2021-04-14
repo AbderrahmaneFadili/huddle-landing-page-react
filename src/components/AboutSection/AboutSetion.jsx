@@ -27,7 +27,7 @@ const AboutSetion = ({
   padding,
 }) => {
   return (
-    <AboutWrapper padding={padding} bgColor={bgColor}>
+    <>
       {/* Patterns */}
       {aboutTopMobilePattern && (
         <PatternMobileTop src={aboutTopMobilePattern} />
@@ -35,19 +35,21 @@ const AboutSetion = ({
       {aboutTopDesktopPattern && (
         <PetternDesktopTop src={aboutTopDesktopPattern} />
       )}
-      <Container>
-        <AboutContainer imgStart={imgStart}>
-          <AboutCol>
-            <AboutImg src={aboutImage} />
-          </AboutCol>
-          <AboutCol>
-            <AboutContent>
-              <AboutTitle>{aboutTitle}</AboutTitle>
-              <AboutDescription>{aboutDescription}</AboutDescription>
-            </AboutContent>
-          </AboutCol>
-        </AboutContainer>
-      </Container>
+      <AboutWrapper padding={padding} bgColor={bgColor}>
+        <Container>
+          <AboutContainer imgStart={imgStart}>
+            <AboutCol>
+              <AboutImg src={aboutImage} />
+            </AboutCol>
+            <AboutCol>
+              <AboutContent>
+                <AboutTitle>{aboutTitle}</AboutTitle>
+                <AboutDescription>{aboutDescription}</AboutDescription>
+              </AboutContent>
+            </AboutCol>
+          </AboutContainer>
+        </Container>
+      </AboutWrapper>
       {/* Patterns */}
       {aboutBottomMobilePattern && (
         <PatternMobileBottom src={aboutBottomMobilePattern} />
@@ -55,7 +57,7 @@ const AboutSetion = ({
       {aboutBottomDesktopPattern && (
         <PatternDesktopBottom src={aboutBottomDesktopPattern} />
       )}
-    </AboutWrapper>
+    </>
   );
 };
 

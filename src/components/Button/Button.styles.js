@@ -20,6 +20,7 @@ export const ButtonWrapper = styled.button`
   cursor: pointer;
   position: relative;
   outline: none;
+  white-space: nowrap;
 
   &::before {
     content: "";
@@ -35,5 +36,13 @@ export const ButtonWrapper = styled.button`
 
   &:hover::before {
     opacity: 1;
+  }
+
+  @media screen and (min-width: 300px) {
+    padding: 0.7rem 2rem;
+  }
+
+  @media screen and (max-width: 290px) {
+    padding: 0.7rem 1rem;
   }
 `;

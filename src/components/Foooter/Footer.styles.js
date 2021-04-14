@@ -4,9 +4,9 @@ import Button from "../Button/Button";
 export const FooterMobilePattern = styled.img`
   width: 100%;
   position: relative;
-  top: 6px;
+  top: 7px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 766px) {
     display: none;
   }
 `;
@@ -14,7 +14,7 @@ export const FooterMobilePattern = styled.img`
 export const FooterDesktopPattern = styled.img`
   width: 100%;
   position: relative;
-  top: 6px;
+  top: 7px;
 
   @media screen and (max-width: 766px) {
     display: none;

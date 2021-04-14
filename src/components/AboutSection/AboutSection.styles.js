@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PatternMobileTop = styled.img`
   width: 100%;
   position: relative;
-  top: -8rem;
+  top: 6px;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -13,8 +13,7 @@ export const PatternMobileTop = styled.img`
 export const PatternMobileBottom = styled.img`
   width: 100%;
   position: relative;
-  bottom: -5.5rem;
-  height: 100px;
+  bottom: 6px;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -25,9 +24,9 @@ export const PatternMobileBottom = styled.img`
 export const PetternDesktopTop = styled.img`
   width: 100%;
   position: relative;
-  top: -8rem;
+  top: 5px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 766px) {
     display: none;
   }
 `;
@@ -36,8 +35,9 @@ export const PetternDesktopTop = styled.img`
 export const PatternDesktopBottom = styled.img`
   width: 100%;
   position: relative;
-  bottom: -7rem;
-  @media screen and (max-width: 768px) {
+  bottom: 2px;
+
+  @media screen and (max-width: 766px) {
     display: none;
   }
 `;
@@ -45,7 +45,7 @@ export const PatternDesktopBottom = styled.img`
 //About Wrapper
 export const AboutWrapper = styled.section`
   background-color: ${({ bgColor }) => bgColor};
-  padding: ${({ padding }) => (padding ? "18rem 0" : "0")};
+  padding: 8rem 0};
 `;
 
 export const AboutContainer = styled.div`
