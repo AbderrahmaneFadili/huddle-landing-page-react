@@ -9,6 +9,7 @@ import IntroSection from "./components/IntroSection/IntroSection";
 import CommunitiesSection from "./components/CommunitiesSection/CommunitiesSection";
 import AboutSetion from "./components/AboutSection/AboutSetion";
 import ReadyToBuild from "./components/ReadyToBuild/ReadyToBuild";
+import Footer from "./components/Foooter/Footer";
 
 const App = () => {
   console.log(aboutOne);
@@ -23,6 +24,7 @@ const App = () => {
         <AboutSetion {...aboutTwo} />
         <AboutSetion {...aboutThree} />
         <ReadyToBuild />
+        <Footer />
       </>
     </ThemeProvider>
   );

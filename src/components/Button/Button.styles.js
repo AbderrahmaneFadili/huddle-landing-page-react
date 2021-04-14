@@ -18,8 +18,21 @@ export const ButtonWrapper = styled.a`
   transition: 0.4s all ease-in;
   text-align: center;
   cursor: pointer;
+  position: relative;
 
-  &:hover {
-    opacity: 0.7;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 103%;
+    height: 107%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: ${({ rounded }) => (rounded ? "7rem" : ".5rem")};
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 `;
