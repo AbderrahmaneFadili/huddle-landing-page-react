@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "../../themes/GlobalStyle";
 import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
 import {
@@ -14,6 +14,7 @@ import {
   NewsletterForm,
   NewsletterSubmit,
   NewsletterTitle,
+  EmailErrorMessage,
   Social,
   SocialDescription,
   SocialInfo,
@@ -24,6 +25,23 @@ import {
 } from "./Footer.styles";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const emailRE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (!emailRE.test(email)) {
+      setEmailError("Check your email pleae");
+    } else {
+      setEmailError("");
+    }
+  };
   return (
     <>
       <FooterMobilePattern
@@ -44,9 +62,18 @@ const Footer = () => {
                   email address
                 </NewsletterDescription>
 
-                <NewsletterForm>
-                  <EmailInput type="email" />
-                  <NewsletterSubmit>Subscribe</NewsletterSubmit>
+                <NewsletterForm onSubmit={handleSubmit}>
+                  <EmailInput
+                    style={{
+                      borderColor: emailError ? "red" : "transparent",
+                    }}
+                    onChange={handleEmailChange}
+                    type="text"
+                  />
+                  <EmailErrorMessage>
+                    {emailError && emailError}
+                  </EmailErrorMessage>
+                  <NewsletterSubmit type="submit">Subscribe</NewsletterSubmit>
                 </NewsletterForm>
               </Newsletter>
             </FooterCol>

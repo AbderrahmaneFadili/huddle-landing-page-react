@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonWrapper = styled.a`
+export const ButtonWrapper = styled.button`
   text-decoration: none;
   background-color: ${({ outline }) =>
     outline ? "transparent" : "var(--pink)"};
@@ -19,6 +19,7 @@ export const ButtonWrapper = styled.a`
   text-align: center;
   cursor: pointer;
   position: relative;
+  outline: none;
 
   &::before {
     content: "";

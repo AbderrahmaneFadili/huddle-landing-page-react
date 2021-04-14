@@ -68,13 +68,20 @@ export const NewsletterForm = styled.form`
 
 export const EmailInput = styled.input`
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1;
   padding: 1.2rem;
   border: none;
   outline: none;
   border-radius: 0.5rem;
   font-family: var(--body-font);
   font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+`;
+export const EmailErrorMessage = styled.span`
+  color: red;
+  margin: 1rem 0;
+  align-self: flex-start;
 `;
 
 export const NewsletterSubmit = styled(Button)``;

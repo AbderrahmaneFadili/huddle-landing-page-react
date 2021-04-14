@@ -1,9 +1,23 @@
 import React from "react";
 import { ButtonWrapper } from "./Button.styles";
 
-const Button = ({ children, href, outline, rounded }) => {
+const Button = ({
+  type,
+  onClick,
+  onSubmit,
+  children,
+  href,
+  outline,
+  rounded,
+}) => {
   return (
-    <ButtonWrapper href={href} outline={outline} rounded={rounded}>
+    <ButtonWrapper
+      onSubmit={onSubmit}
+      onClick={onClick}
+      href={href}
+      outline={outline}
+      rounded={rounded}
+    >
       {children}
     </ButtonWrapper>
   );
