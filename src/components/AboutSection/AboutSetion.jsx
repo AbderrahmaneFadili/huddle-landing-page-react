@@ -13,6 +13,7 @@ import {
   AboutContent,
   AboutDescription,
 } from "./AboutSection.styles";
+import Fade from "react-reveal/Fade";
 
 const AboutSetion = ({
   imgStart,
@@ -39,13 +40,17 @@ const AboutSetion = ({
         <Container>
           <AboutContainer imgStart={imgStart}>
             <AboutCol>
-              <AboutImg src={aboutImage} />
+              <Fade right>
+                <AboutImg src={aboutImage} />
+              </Fade>
             </AboutCol>
             <AboutCol>
-              <AboutContent>
-                <AboutTitle>{aboutTitle}</AboutTitle>
-                <AboutDescription>{aboutDescription}</AboutDescription>
-              </AboutContent>
+              <Fade left>
+                <AboutContent>
+                  <AboutTitle>{aboutTitle}</AboutTitle>
+                  <AboutDescription>{aboutDescription}</AboutDescription>
+                </AboutContent>
+              </Fade>
             </AboutCol>
           </AboutContainer>
         </Container>

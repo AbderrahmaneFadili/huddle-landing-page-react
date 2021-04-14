@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
       --heading-font:${({ theme }) => theme.typography.headings};
       --body-font:${({ theme }) => theme.typography.body};
       font-family:var(--body-font);
+      overflow-x:hidden;
   }
  
  body{

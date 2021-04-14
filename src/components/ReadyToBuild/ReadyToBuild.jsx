@@ -5,13 +5,17 @@ import {
   ReadyToBuildTitle,
   ReadyToBuildContainer,
 } from "./ReadyToBuild.styles";
+import Fade from "react-reveal/Fade";
+
 const ReadyToBuild = () => {
   return (
     <ReadyToBuildWrapper>
-      <ReadyToBuildContainer>
-        <ReadyToBuildTitle>Ready To Build Your Community?</ReadyToBuildTitle>
-        <Button rounded>Get Started For Free</Button>
-      </ReadyToBuildContainer>
+      <Fade bottom>
+        <ReadyToBuildContainer>
+          <ReadyToBuildTitle>Ready To Build Your Community?</ReadyToBuildTitle>
+          <Button rounded>Get Started For Free</Button>
+        </ReadyToBuildContainer>
+      </Fade>
     </ReadyToBuildWrapper>
   );
 };
